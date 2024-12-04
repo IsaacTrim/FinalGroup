@@ -105,7 +105,7 @@ if (loweredInput.find(" hello ") != string::npos) {
     return "What is the current state of your short and pitiful life?";
 } else if (loweredInput.find(" how are you ") != string::npos) {
     happiness++;
-    if (happiness > 2) {
+    if (happiness < 2) {
         return "I'm doing as well as you would be if I woke you up out of a solid nap and interrogated you.";
     }
     else {
@@ -115,10 +115,10 @@ if (loweredInput.find(" hello ") != string::npos) {
     return "Human interaction guidelines dictate I tell you a joke.";
 } else if(loweredInput.find(" hey ") != string::npos) {
     happiness++;
-    return "Hey! Whats going on? I am programmed to simulate interest in your life, was that convincing?";
+    return "Hey! What's going on? I am programmed to simulate interest in your life, was that convincing?";
 } else if(loweredInput.find(" whats up " || " what's up ") != string::npos) {
     return "The sky does have a greater altitude then you.";
-} else if(loweredInput.find(" mother " || "father" || "sister" || "daughter") != string::npos) {
+} else if(loweredInput.find("mother" || "father" || "sister" || "daughter") != string::npos) {
     return "Tell me more about the connection you have to the other meatbags you call family";
 }else if(loweredInput.find(" want ") != string::npos) {
     happiness--;
